@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-npm install && node bin/www
+npm install && npm start
