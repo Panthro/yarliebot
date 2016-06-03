@@ -28,7 +28,7 @@ var searchAndDownload = function (song, res) {
                         var YD = new YoutubeMp3Downloader({
                             "ffmpegPath": process.env.FFMPEG_PATH,  // Where is the FFmpeg binary located?
                             "outputPath": MP3_FOLDER,               // Where should the downloaded and encoded files be stored?
-                            "youtubeVideoQuality": "highest",       // What video quality should be used?
+                            "youtubeVideoQuality": "lowest",       // What video quality should be used?
                             "queueParallelism": 2,                  // How many parallel downloads/encodes should be started?
                             "progressTimeout": 2000                 // How long should be the interval of the progress reports
                         });
