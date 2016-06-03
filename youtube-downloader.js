@@ -4,7 +4,7 @@ const YoutubeMp3Downloader = require('youtube-mp3-downloader');
 const fs = require('fs');
 const youTube = new YouTube();
 
-const MP3_FOLDER = __dirname + '/public/mp3/';
+const MP3_FOLDER = __dirname + '/public/mp3';
 const EXTENSION = '.mp3';
 
 youTube.setKey(process.env.YOUTUBE_KEY);
