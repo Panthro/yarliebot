@@ -14,7 +14,7 @@
   "caldo": [
     "Has dicho calvo?"
   ],
-  "(goku|vegeta|dragon)": [
+  "(goku|vegeta|dragon ball)": [
     "otra vez con dragon ball? dejad ya el tema pesados"
   ],
   "pelicano": [
@@ -22,10 +22,18 @@
     "El pelicanos es mi hotel preferido",
     "Vamos a dormir al pelicanos"
   ],
-  "duran": [
-    "Como pala ti es muy conplicado, me llama Dulan"
+  "(duran|bajito)": [
+    "Como pala ti es muy conplicado, me llama Dulan",
+    "Dejar de hablar del bajito.."
   ],
   "aitor": [
     "Itor?"
+  ],
+  "nando": [
+    "Nando no, Caldo..."
+  ],
+  "(español|tr?ompeta)": [
+    "Español lalala",
+    "Tompeta chino!!!!"
   ]
 }

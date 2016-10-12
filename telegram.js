@@ -40,7 +40,7 @@ bot.on('message', function (msg) {
     var chatId = msg.chat.id;
     // photo can be: a file path, a stream or a Telegram file_id
     console.log(msg);
-    if (chatId === -165153923 || -173806844) {
+    if (chatId === -165153923 || chatId === -173806844) {
         var sent = false;
         Object.keys(botAnswers).forEach((key) => {
             if (new RegExp(key, "gi").exec(msg.text) !== null && !sent) {
