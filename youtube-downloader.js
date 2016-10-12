@@ -16,7 +16,7 @@ var searchAndDownload = function (song, res) {
         }
         else {
             let video = result.items[0];
-            fs.stat(MP3_FOLDER + video.snippet.title + EXTENSION, (error,stat) => {
+            fs.stat(MP3_FOLDER + video.snippet.title + EXTENSION, (error, stat) => {
                 if (!error) {
                     console.log('Already exists, not downloading');
                     renderResponse(res, {song: video.snippet.title});
@@ -30,14 +30,14 @@ var searchAndDownload = function (song, res) {
                             "outputPath": MP3_FOLDER,               // Where should the downloaded and encoded files be stored?
                             "youtubeVideoQuality": "lowest",       // What video quality should be used?
                             "queueParallelism": 2,                  // How many parallel downloads/encodes should be started?
-                            "progressTimeout": 2000                 // How long should be the interval of the progress reports
+                            "progressTimeout": 10000                 // How long should be the interval of the progress reports
                         });
 
                         YD.download(video.id.videoId);
 
                         YD.on("finished", function (data) {
                             console.log(data);
-                            renderResponse(res, {song: data.videoTitle});
+                            renderResponse(res, {song: data ? data.videoTitle : video.snippet.title});
                         });
 
                         YD.on("error", function (error) {
@@ -53,6 +53,10 @@ var searchAndDownload = function (song, res) {
 };
 
 var renderResponse = function (res, data) {
-    res.render("download", data)
+    if (typeof res === 'function') {
+        res(data);
+    } else {
+        res.render("download", data)
+    }
 };
 module.exports = searchAndDownload;
