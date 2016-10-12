@@ -6,6 +6,8 @@ WORKDIR /app
 
 ADD . /app
 
-RUN ./run.sh
+RUN mkdir /app/public/mp3
+
+RUN npm install
 
 CMD npm start
