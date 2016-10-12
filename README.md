@@ -8,6 +8,8 @@ YOUTUBE_KEY=<youtube_api_key>
 
 FFMPEG_PATH=/path/to/ffmpeg
 
+TELEGRAM_TOKEN =< Your telegram bot token >
+ 
 __start__
 
 `./run.sh`
