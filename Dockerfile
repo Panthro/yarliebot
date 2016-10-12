@@ -6,6 +6,6 @@ WORKDIR /app
 
 ADD . /app
 
-RUN npm install
+RUN ./run.sh
 
 CMD npm start
