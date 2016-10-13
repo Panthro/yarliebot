@@ -13,10 +13,10 @@ var token = process.env.TELEGRAM_TOKEN;
 var bot = new TelegramBot(token, {polling: true});
 
 // Matches /echo [whatever]
-bot.onText(/\/echo (.+)/, function (msg, match) {
+bot.onText(/\/start/, function (msg) {
     var fromId = msg.from.id;
-    var resp = match[1];
-    bot.sendMessage(fromId, resp);
+    bot.sendMessage(fromId, `Hello there. You can *send me the name of a song* and I'll try to find it for you.\n I also *work inside groups*, try adding me to a *group* and type\n\n/download Bohemian Rhapsody\n\nYeap, I'm that smart 🤓`, {parse_mode: "Markdown"});
+    // bot.sendMessage(fromId, resp);
 });
 
 
@@ -29,11 +29,20 @@ bot.onText(/Hola\sYarlie/gi, function (msg) {
 var downloadSong = function (msg) {
     var chatId = msg.chat.id;
     var text = msg.text;
-    bot.sendMessage(chatId, `I'm searching for *${text}*, let's see what I can find`, {parse_mode: "Markdown"});
-    downloader(text, (data) => {
-        bot.sendMessage(chatId, `Looks like I have found one you would like *${data.song}*. Let me send it over...`, {parse_mode: "Markdown"});
-        bot.sendAudio(chatId, path.join(MP3_FOLDER, data.song + '.mp3'));
+    // bot.sendMessage(chatId, `I'm searching for *${text}*, let's see what I can find 🔍`, {parse_mode: "Markdown"});
+    downloader(text, (data, error) => {
+        if (error) {
+            bot.sendMessage(chatId, `There was an error downloading the song...sorry about that 😞`, {parse_mode: "Markdown"});
+        } else {
+            bot.sendAudio(chatId, path.join(MP3_FOLDER, data.song.replace(/('|"|\/|\\|\*|\||)/gi, '') + '.mp3'));
+        }
 
+    }, (video) => {
+        var title = video.snippet.title;
+
+        bot.sendMessage(chatId, `I have found *${title}*. 🔍 I'll download and send it over...`, {parse_mode: "Markdown"});
+    }, () =>{
+        bot.sendMessage(chatId, `I did not find song with *${msg.text}* `, {parse_mode: "Markdown"});
     });
 };
 bot.on('message', function (msg) {
@@ -52,7 +61,7 @@ bot.on('message', function (msg) {
             }
         });
         //bot.sendMessage(chatId, msg.text);
-    } else if (msg.text && msg.chat.type !== 'group') {
+    } else if (msg.text && msg.chat.type !== 'group' && !msg.text.startsWith("/")) {
         downloadSong(msg);
     }
 });
