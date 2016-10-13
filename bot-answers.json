@@ -7,7 +7,9 @@
     "Carles, mira que estan diciendo por aqui"
   ],
   "caldo": [
-    "Has dicho calvo?"
+    "Has dicho calvo?",
+    "Porque le toman el pelo?",
+    "No grites tanto"
   ],
   "(goku|vegeta|dragon ball)": [
     "otra vez con dragon ball? dejad ya el tema pesados"
@@ -17,9 +19,10 @@
     "El pelicanos es mi hotel preferido",
     "Vamos a dormir al pelicanos"
   ],
-  "(duran|bajito)": [
+  "(duran|bajito|dulan)": [
     "Como pala ti es muy conplicado, me llama Dulan",
-    "Dejar de hablar del bajito.."
+    "Dejar de hablar del bajito..",
+    "Voy a buscar unas gafas...un momento"
   ],
   "aitor": [
     "Itor?"
@@ -33,5 +36,11 @@
   ],
   "test": [
     "200 OK"
+  ],
+  "petardo":[
+    "A ver si el petardo explota ya..."
+  ],
+  "Rotonda":[
+    "estoy un poco perdido..."
   ]
 }
