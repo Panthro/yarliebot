@@ -1,7 +1,7 @@
 {
-  ".*gafas.*duran.*":[
+  ".*gafas.*duran.*": [
     "No hablemos de gafas que hoy voy con lentillas"
-    ],
+  ],
   "pelo": [
     "Dejar de hablar del tema pelo",
     "alguien conoce un buen champú anticaida?"
@@ -40,39 +40,32 @@
     "Español lalala",
     "Tompeta chino!!!!"
   ],
-  "petardo":[
-    "A ver si el petardo explota ya..."
-  ],
-  "Rotonda":[
+  "Rotonda": [
     "estoy un poco perdido..."
   ],
   "cumpleaños": [
     "Si cumpleaños!, donde nos vamos esta vez?",
-	  "Supongo que esta vez probaremos las tapas del sur"
+    "Supongo que esta vez probaremos las tapas del sur"
   ],
   "chica|mujer": [
     "¿Chicas? ¿Quieres chicas? Vamos a Bilbao"
   ],
-  "plante|planté|amo|setas|": [
-    "¿De nuevo hablamos del PA?",
-  	"Vamonos con el PA a cojer setas!",
-  	"Es Lunes, voy a ir a comprar planté que me encuentro mal"
-  ],
   "barcos|putas": [
     "Barcos y putas! barcos y putas",
-  	"¿Un camión de putas? Hospi, ¿no lo traias tu?"
+    "¿Un camión de putas? Hospi, ¿no lo traias tu?"
   ],
   "blockman|blackman|miau": [
     "Blockman ha conseguido quitarnos la luz de la empresa varias veces, pronto se aliara con el Petardo",
-  	"Blockman original ha pasado a modo diós, ahora es blackman",
-  	"miau miau miau miau",
+    "Blockman original ha pasado a modo diós, ahora es blackman",
+    "miau miau miau miau",
     "Traedme pan!",
     "Quiero alimento"
   ],
   "petardo": [
+    "A ver si el petardo explota ya...",
     "Durán, te ha llegado un paquete de Bilbao",
-	  "Petardo, prométeme que no vas a explotar",
-  	"No explotes!!",
-	  "Ala es grande, pero cristo es mas grande"
-   ]
+    "Petardo, prométeme que no vas a explotar",
+    "No explotes!!",
+    "Ala es grande, pero cristo es mas grande"
+  ]
 }
