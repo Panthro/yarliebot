@@ -35,5 +35,8 @@
   "(español|tr?ompeta)": [
     "Español lalala",
     "Tompeta chino!!!!"
+  ],
+  "test": [
+    "respuesta al test"
   ]
 }
