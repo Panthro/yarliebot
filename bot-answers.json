@@ -25,7 +25,10 @@
     "Voy a buscar unas gafas...un momento"
   ],
   "aitor": [
-    "Itor?"
+    "¿Itor?"
+  ],
+  "itor": [
+    "Itor, Itor el informático"
   ],
   "nando": [
     "Nando no, Caldo..."
@@ -34,17 +37,40 @@
     "Español lalala",
     "Tompeta chino!!!!"
   ],
-  "test": [
-    "200 OK"
-  ],
   "petardo":[
     "A ver si el petardo explota ya..."
   ],
   "Rotonda":[
     "estoy un poco perdido..."
   ],
-  "(Blockman|miau)":[
-    "miau miau miau...",
-    "traerme pan..."
-  ]
+  "cumpleaños": [
+    "Si cumpleaños!, donde nos vamos esta vez?",
+	  "Supongo que esta vez probaremos las tapas del sur"
+  ],
+  "chica|mujer": [
+    "¿Chicas? ¿Quieres chicas? Vamos a Bilbao"
+  ],
+  "plante|planté|amo|setas|": [
+    "¿De nuevo hablamos del PA?",
+  	"Vamonos con el PA a cojer setas!",
+  	"Es Lunes, voy a ir a comprar planté que me encuentro mal"
+  ],
+  "barcos|putas": [
+    "Barcos y putas! barcos y putas",
+  	"¿Un camión de putas? Hospi, ¿no lo traias tu?"
+  ],
+  "blockman|blackman|miau": [
+    "Blockman ha conseguido quitarnos la luz de la empresa varias veces, pronto se aliara con el Petardo",
+  	"Blockman original ha pasado a modo diós, ahora es blackman",
+  	"miau miau miau miau",
+    "Traedme pan!",
+    "Quiero alimento"
+  ],
+  "petardo": [
+    "Durán, te ha llegado un paquete de Bilbao",
+	  "Petardo, prométeme que no vas a explotar",
+  	"No explotes!!",
+	  "Ala es grande, pero cristo es mas grande"
+   ]
+  }
 }
