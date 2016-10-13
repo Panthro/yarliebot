@@ -1,5 +1,7 @@
 # yarliebot
 
+[![Build Status](https://travis-ci.org/Panthro/yarliebot.svg?branch=master)](https://travis-ci.org/Panthro/yarliebot)
+
 ## running
 
 __Environment variables needed__
