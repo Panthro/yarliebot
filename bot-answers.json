@@ -41,14 +41,18 @@
     "Tompeta chino!!!!"
   ],
   "Rotonda": [
-    "estoy un poco perdido..."
+    "estoy un poco perdido...",
+    "Cuando entras en una rotonda es normal taparte los ojos  y jugar a la ruleta rusa"
   ],
   "cumpleaños": [
     "Si cumpleaños!, donde nos vamos esta vez?",
-    "Supongo que esta vez probaremos las tapas del sur"
+    "Supongo que esta vez probaremos las tapas del sur",
+    "Próximo cumpleaños... Dulan!"
   ],
-  "chica|mujer": [
-    "¿Chicas? ¿Quieres chicas? Vamos a Bilbao"
+  "bilbao": [
+    "Tanto en calidad como en proporcion, las mejores chicas",
+    "Que visitar: Guggenheim, Pelicanos, San Mamés",
+    "Cantidad de bares importante"
   ],
   "barcos|putas": [
     "Barcos y putas! barcos y putas",
@@ -59,7 +63,8 @@
     "Blockman original ha pasado a modo diós, ahora es blackman",
     "miau miau miau miau",
     "Traedme pan!",
-    "Quiero alimento"
+    "Quiero alimento",
+    "Primero dominaremos el parque, luego el mundo - Blockman Jr."
   ],
   "petardo": [
     "A ver si el petardo explota ya...",
@@ -69,6 +74,14 @@
     "Ala es grande, pero cristo es mas grande"
   ],
   "cinta":[
-    "Hola 🎀"
+    "Hola 🎀",
+    "Cerdito, ataca!",
+    "Minichicas al poder!!"
+  ],
+  "qr":[
+    "¿Hablamos del QR café?, espero que no",
+    "¿Mi puntuación personal? Bajo cero",
+    "!Calidad y precio insuperables! En el parque técnologico es el mejor despues de las máquinas vending",
+    "¿Hacemos un QR?, mejor un kebab"
   ]
 }
