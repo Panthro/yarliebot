@@ -8,6 +8,4 @@ ADD . /app
 
 RUN mkdir /app/public/mp3
 
-RUN npm install
-
 CMD npm start
