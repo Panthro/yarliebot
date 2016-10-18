@@ -32,6 +32,11 @@ var downloadSong = function (msg) {
     // bot.sendMessage(chatId, `I'm searching for *${text}*, let's see what I can find 🔍`, {parse_mode: "Markdown"});
     downloader(text, (data, error) => {
         if (error) {
+            //Aitor test
+            //I think the error message is not successfully delivered
+                var fromId = msg.from.id;
+                bot.sendMessage(fromId, `Download error (Simple text)`, {parse_mode: "Markdown"});
+            //End Aitor test
             bot.sendMessage(chatId, `There was an error downloading the song...sorry about that 😞`, {parse_mode: "Markdown"});
         } else {
             bot.sendAudio(chatId, path.join(MP3_FOLDER, data.song.replace(/('|"|\/|\\|\*|\||)/gi, '') + '.mp3'));
