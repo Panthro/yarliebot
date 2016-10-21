@@ -32,17 +32,21 @@ var downloadSong = function (msg) {
         if (error) {
             bot.sendMessage(chatId, `There was an error downloading the song...sorry about that 😞`, {parse_mode: "Markdown"});
         } else {
-            try{
-              bot.sendAudio(chatId, path.join(MP3_FOLDER, data.song.replace(/('|"|\/|\\|\*|\||)/gi, '') + '.mp3'));
-            }catch(err1){ // @TODO catch sincrone event
-              bot.sendMessage(chatId, `There was an error sending the song...sorry about that 😞`, {parse_mode: "Markdown"});
-            }
+
+            bot.sendAudio(chatId, path.join(MP3_FOLDER, data.song.replace(/('|"|\/|\\|\*|\||)/gi, '') + '.mp3'))
+                .then(() => {
+                    // TODO Cleanup the downloaded music after an timeout
+                })
+                .catch((err) => {
+                    bot.sendMessage(chatId, `There was an error sending the song...sorry about that 😞\n ${err && err.message || ''}`, {parse_mode: "Markdown"});
+                });
+
         }
     }, (video) => {
         var title = video.snippet.title;
 
         bot.sendMessage(chatId, `I have found *${title}*. 🔍 I'll download and send it over...`, {parse_mode: "Markdown"});
-    }, () =>{
+    }, () => {
         bot.sendMessage(chatId, `I did not find song with *${msg.text}* `, {parse_mode: "Markdown"});
     });
 };
