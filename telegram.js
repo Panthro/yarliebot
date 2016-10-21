@@ -7,7 +7,6 @@ var path = require('path');
 const MP3_FOLDER = __dirname + '/public/mp3';
 const botAnswers = require('./bot-answers.json');
 
-
 var token = process.env.TELEGRAM_TOKEN;
 // Setup polling way
 var bot = new TelegramBot(token, {polling: true});
@@ -19,10 +18,9 @@ bot.onText(/\/start/, function (msg) {
     // bot.sendMessage(fromId, resp);
 });
 
-
-bot.onText(/Hola\sYarlie/gi, function (msg) {
+bot.onText(/Hi\sYarlie/gi, function (msg) {
     var fromId = msg.from.id;
-    bot.sendMessage(fromId, "Hola, quiero un Kebab!!");
+    bot.sendMessage(fromId, "Hi there, my name is Yarlie,I'm an expert with music and kebabs.");
 });
 
 // Any kind of message
@@ -36,11 +34,10 @@ var downloadSong = function (msg) {
         } else {
             try{
               bot.sendAudio(chatId, path.join(MP3_FOLDER, data.song.replace(/('|"|\/|\\|\*|\||)/gi, '') + '.mp3'));
-            }catch(err1){
-              bot.sendMessage(chatId, `There was an error downloading the song...sorry about that 😞`, {parse_mode: "Markdown"});
+            }catch(err1){ // @TODO catch sincrone event
+              bot.sendMessage(chatId, `There was an error sending the song...sorry about that 😞`, {parse_mode: "Markdown"});
             }
         }
-
     }, (video) => {
         var title = video.snippet.title;
 
@@ -49,6 +46,7 @@ var downloadSong = function (msg) {
         bot.sendMessage(chatId, `I did not find song with *${msg.text}* `, {parse_mode: "Markdown"});
     });
 };
+
 bot.on('message', function (msg) {
     var chatId = msg.chat.id;
     // photo can be: a file path, a stream or a Telegram file_id
@@ -61,7 +59,6 @@ bot.on('message', function (msg) {
                 var replyMessage = msgArray[Math.floor(Math.random() * msgArray.length)];
                 bot.sendMessage(chatId, replyMessage);
                 sent = true;
-
             }
         });
         //bot.sendMessage(chatId, msg.text);
@@ -71,7 +68,6 @@ bot.on('message', function (msg) {
 });
 
 bot.onText(/\/(download|descarga|@yarliebot) (.+)/gi, function (msg, match) {
-
     msg.text = match[2];
     downloadSong(msg);
 });
